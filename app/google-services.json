@@ -1,105 +1,27 @@
 {
   "project_info": {
-    "project_number": "1014542355382",
-    "firebase_url": "https://shungdatabase.firebaseio.com",
-    "project_id": "shungdatabase",
-    "storage_bucket": "shungdatabase.appspot.com"
+    "project_number": "434586401817",
+    "firebase_url": "https://tuebaefutsal.firebaseio.com",
+    "project_id": "tuebaefutsal",
+    "storage_bucket": "tuebaefutsal.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1014542355382:android:96e36074d0e3cf9c",
-        "android_client_info": {
-          "package_name": "app.laysheenapp1"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1014542355382-aoa47ea5ic9mkalt9c35mn1jvr2br9ds.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "app.laysheenapp1",
-            "certificate_hash": "2b3646b3d21f1a58b6a57d20de72ee9355a3942e"
-          }
-        },
-        {
-          "client_id": "1014542355382-08i776q8lb9qvo70s0phkquni95kfef5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD4Jk90PD6ycFvGD56ahbKXCZuxayhuDK8"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1014542355382:android:669983a3f162da02",
-        "android_client_info": {
-          "package_name": "app.c19_cg_app"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1014542355382-08i776q8lb9qvo70s0phkquni95kfef5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD4Jk90PD6ycFvGD56ahbKXCZuxayhuDK8"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1014542355382:android:ee2f61346de30367",
+        "mobilesdk_app_id": "1:434586401817:android:ee2f61346de30367",
         "android_client_info": {
           "package_name": "com.attendance.tuesbae.tuesbaeattendance"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1014542355382-fvghlr1e9c7c0nisrv0qmks70hc8aaaa.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.attendance.tuesbae.tuesbaeattendance",
-            "certificate_hash": "e9e705e6e891858d13c810a1d81bd1b9212dfae4"
-          }
-        },
-        {
-          "client_id": "1014542355382-08i776q8lb9qvo70s0phkquni95kfef5.apps.googleusercontent.com",
+          "client_id": "434586401817-2b1kat3bocot7tlaehpngir1ss55hubr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD4Jk90PD6ycFvGD56ahbKXCZuxayhuDK8"
+          "current_key": "AIzaSyDzaPFd9C583tmsqYCA6ZYs7vClqGZG8fI"
         }
       ],
       "services": {
@@ -107,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1014542355382-08i776q8lb9qvo70s0phkquni95kfef5.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
