@@ -11,8 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
 import android.text.style.StyleSpan;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,7 +21,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ListView;
-import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +33,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -250,6 +248,11 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             createUserListDialog();
             return true;
+        }
+        else if(id == R.id.action_register){
+            registerUserAlertDialg();
+            return true;
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -538,5 +541,61 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+    }
+
+    public void registerUserAlertDialg(){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        // Get the layout inflater
+        final LayoutInflater inflater = MainActivity.this.getLayoutInflater();
+
+        final DatabaseReference myRef = database.getReference("User/ID");
+
+
+
+        // Inflate and set the layout for the dialog
+        // Pass null as the parent view because its going in the dialog layout
+        builder.setView(inflater.inflate(R.layout.register_user_layout, null))
+                // Add action buttons
+                .setPositiveButton("Register", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(final DialogInterface dialog, int id) {
+                        // sign in the user ...
+
+
+                        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                dataSnapshot.getChildrenCount();
+
+                                TextView registerUser_Name_editText = (TextView) ((AlertDialog) dialog).findViewById(R.id.register_user_Name_editText);
+                                TextView registerUser_AltName_editText = (TextView) ((AlertDialog) dialog).findViewById(R.id.register_user_altName_editText);
+
+
+                                NewUser newUser = new NewUser(registerUser_Name_editText.getText().toString(),registerUser_AltName_editText.getText().toString(),"0");
+
+                                myRef.child(String.valueOf(dataSnapshot.getChildrenCount()+1)).setValue(newUser);
+
+                                Toast.makeText(MainActivity.this,"User Registered",Toast.LENGTH_SHORT).show();
+
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
+
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        builder.create();
+
+        builder.show();
+
+
     }
 }

@@ -5,5 +5,9 @@
         android:orderInCategory="100"  app:showAsAction="ifRoom"
         android:icon="@mipmap/ic_add_circle_white_24dp"/>
 
+    <item android:id="@+id/action_register" android:title="@string/action_register_new_player"
+        android:orderInCategory="100"  app:showAsAction="ifRoom"
+        android:icon="@mipmap/ic_person_add_white_24dp"/>
+
 
 </menu>
